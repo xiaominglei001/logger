@@ -1,3 +1,9 @@
+
+### 补充注意下面两处策略配置默认应该是2和0
+  .methodCount(2)         // (Optional) How many method line to show. Default 2
+  .methodOffset(0)        // (Optional) Hides internal method calls up to offset. Default 0
+  
+<hr>
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Logger-brightgreen.svg?style=flat)](http://android-arsenal.com/details/1/1658) [![](https://img.shields.io/badge/AndroidWeekly-%23147-blue.svg)](http://androidweekly.net/issues/issue-147)
 [![Join the chat at https://gitter.im/orhanobut/logger](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/orhanobut/logger?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) <a href="http://www.methodscount.com/?lib=com.orhanobut%3Alogger%3A2.0.0"><img src="https://img.shields.io/badge/Methods and size-198 | 18 KB-e91e63.svg"/></a> [![Build Status](https://travis-ci.org/orhanobut/logger.svg?branch=master)](https://travis-ci.org/orhanobut/logger)
 
@@ -58,8 +64,8 @@ Logger.xml(XML_CONTENT);
 ```java
 FormatStrategy formatStrategy = PrettyFormatStrategy.newBuilder()
   .showThreadInfo(false)  // (Optional) Whether to show thread info or not. Default true
-  .methodCount(0)         // (Optional) How many method line to show. Default 2
-  .methodOffset(7)        // (Optional) Hides internal method calls up to offset. Default 5
+  .methodCount(2)         // (Optional) How many method line to show. Default 2
+  .methodOffset(0)        // (Optional) Hides internal method calls up to offset. Default 0
   .logStrategy(customLog) // (Optional) Changes the log strategy to print out. Default LogCat
   .tag("My custom tag")   // (Optional) Global tag for every log. Default PRETTY_LOGGER
   .build();
